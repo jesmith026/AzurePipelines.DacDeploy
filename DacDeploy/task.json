@@ -46,6 +46,14 @@
       "defaultValue": "",
       "required": true,
       "helpMarkDown": "Password for the SQL Server"
+    },    
+    {
+      "name": "blockOnDataLoss",
+      "type": "boolean",
+      "label": "Block on Possible Data Loss",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Should the deployment stop if the operation could cause data loss"
     }    
   ],
   "execution": {
