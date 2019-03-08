@@ -1,0 +1,57 @@
+{
+  "id": "10ef7930-4166-11e9-8a50-db6baa1d904a",
+  "name": "DacDeploy",
+  "friendlyName": "Data-tier Application Deployment",
+  "description": "A task to deploy a Data-tier application package",
+  "author": "Socratic Programmer",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "0",
+    "Patch": "1"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "DacDeploy",
+  "inputs": [
+    {
+      "name": "dacpac",
+      "type": "filePath",
+      "label": "DACPAC File",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Location of .dacpac package"
+    },    
+    {
+      "name": "server",
+      "type": "string",
+      "label": "Server",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Server location to publish to"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "Username",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Username for the SQL Server"
+    },    
+    {
+      "name": "password",
+      "type": "string",
+      "label": "Password",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Password for the SQL Server"
+    }    
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "$(currentDirectory)\\task.ps1",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}
