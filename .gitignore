@@ -1,2 +1,3 @@
-buildAndReleaseTask/node_modules/
+DacDeploy/node_modules/
 node_modules/
+artifacts/
