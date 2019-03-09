@@ -10,9 +10,16 @@
   "version": {
     "Major": "0",
     "Minor": "0",
-    "Patch": "3"
+    "Patch": "5"
   },
   "instanceNameFormat": "DacDeploy",
+  "groups": [
+    {
+      "name": "configuration",
+      "displayName": "Configuration",
+      "isExpanded": false
+    }
+  ],
   "inputs": [
     {
       "name": "dacpac",
@@ -53,7 +60,15 @@
       "defaultValue": "",
       "required": true,
       "helpMarkDown": "Should the deployment stop if the operation could cause data loss"
-    }    
+    },
+    {
+      "name": "dacdll",
+      "type": "filePath",
+      "label": "Agent Dac.dll File Path",
+      "defaultValue": "C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DAC\\bin\\Microsoft.SqlServer.Dac.dll",
+      "required": true,
+      "helpMarkDown": "Location of Microsoft.SqlServer.Dac.dll on Agent"
+    }
   ],
   "execution": {
     "PowerShell3": {
