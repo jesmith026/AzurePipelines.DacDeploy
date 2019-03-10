@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
-    "id": "Socratic-Dac-Deploy-Task",
+    "id": "DacDeploy",
     "name": "Data-tier Application Deployment",
-    "version": "0.0.5",
+    "version": "0.0.3",
     "publisher": "SocraticProgrammer",
     "targets": [
         {
@@ -23,7 +23,7 @@
     ],
     "contributions": [
         {
-            "id": "Socratic-Dac-Deploy-Task",
+            "id": "DacDeploy",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
